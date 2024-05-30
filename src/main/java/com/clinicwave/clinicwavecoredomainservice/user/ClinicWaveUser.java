@@ -48,4 +48,7 @@ public class ClinicWaveUser extends Audit implements Serializable {
 
   @OneToOne
   private Address address;
+
+  @OneToOne
+  private UserType userType;
 }

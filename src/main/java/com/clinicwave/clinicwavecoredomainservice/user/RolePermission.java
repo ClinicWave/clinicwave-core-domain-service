@@ -1,5 +1,6 @@
 package com.clinicwave.clinicwavecoredomainservice.user;
 
+import com.clinicwave.clinicwavecoredomainservice.audit.Audit;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -16,7 +17,7 @@ import java.io.Serializable;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class RolePermission implements Serializable {
+public class RolePermission extends Audit implements Serializable {
   @Serial
   private static final long serialVersionUID = 1L;
 

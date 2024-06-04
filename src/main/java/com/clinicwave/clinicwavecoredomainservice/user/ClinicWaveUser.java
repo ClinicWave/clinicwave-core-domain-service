@@ -1,6 +1,7 @@
 package com.clinicwave.clinicwavecoredomainservice.user;
 
 import com.clinicwave.clinicwavecoredomainservice.audit.Audit;
+import com.clinicwave.clinicwavecoredomainservice.document.Document;
 import com.clinicwave.clinicwavecoredomainservice.enums.Gender;
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,6 +9,7 @@ import lombok.*;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Set;
 
 /**
  * @author aamir on 5/29/24
@@ -58,4 +60,7 @@ public class ClinicWaveUser extends Audit implements Serializable {
 
   @OneToOne
   private UserType userType;
+
+  @OneToMany(cascade = CascadeType.ALL)
+  private Set<Document> documentSet;
 }

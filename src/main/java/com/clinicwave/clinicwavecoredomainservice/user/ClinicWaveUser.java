@@ -3,6 +3,7 @@ package com.clinicwave.clinicwavecoredomainservice.user;
 import com.clinicwave.clinicwavecoredomainservice.audit.Audit;
 import com.clinicwave.clinicwavecoredomainservice.document.Document;
 import com.clinicwave.clinicwavecoredomainservice.enums.Gender;
+import com.clinicwave.clinicwavecoredomainservice.notification.Notification;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -63,4 +64,7 @@ public class ClinicWaveUser extends Audit implements Serializable {
 
   @OneToMany(cascade = CascadeType.ALL)
   private Set<Document> documentSet;
+
+  @OneToMany(cascade = CascadeType.ALL)
+  private Set<Notification> notificationSet;
 }

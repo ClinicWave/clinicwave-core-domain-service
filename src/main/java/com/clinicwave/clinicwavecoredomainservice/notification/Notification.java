@@ -45,6 +45,9 @@ public class Notification extends Audit implements Serializable {
 
   private Boolean isActive = true;
 
+  @Transient
+  private Long userId;
+
   @OneToOne
   private NotificationType notificationType;
 }

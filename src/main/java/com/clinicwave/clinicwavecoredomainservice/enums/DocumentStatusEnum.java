@@ -5,6 +5,13 @@ package com.clinicwave.clinicwavecoredomainservice.enums;
  */
 public enum DocumentStatusEnum {
   DRAFT,
+  IN_PROGRESS,
+  REVIEWED,
+  PENDING,
+  APPROVED,
+  REJECTED,
   PUBLISHED,
-  ARCHIVED
+  ARCHIVED,
+  DELETED,
+  COMPLETED
 }

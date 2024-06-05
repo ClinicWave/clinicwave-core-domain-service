@@ -33,8 +33,10 @@ public class Document extends Audit implements Serializable {
   @Column(nullable = false)
   private String path;
 
-  @Column(nullable = false)
   private String documentKey;
+
+  @Transient
+  private Long userId;
 
   @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
   private DocumentStatus documentStatus;

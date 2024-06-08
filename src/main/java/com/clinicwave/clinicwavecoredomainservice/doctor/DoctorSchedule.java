@@ -35,6 +35,6 @@ public class DoctorSchedule extends Audit implements Serializable {
   @OneToMany(cascade = CascadeType.ALL, mappedBy = "doctorSchedule")
   private Set<DoctorAvailableDayTime> doctorAvailableDayTimeSet;
 
-  @OneToOne
+  @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
   private DoctorScheduleStatus doctorScheduleStatus;
 }

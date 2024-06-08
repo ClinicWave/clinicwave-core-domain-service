@@ -29,8 +29,10 @@ public class DoctorAvailableDayTime extends Audit implements Serializable {
   private DoctorSchedule doctorSchedule;
 
   @ManyToOne
+  @JoinColumn(nullable = false)
   private DoctorAvailableDay doctorAvailableDay;
 
   @ManyToOne
+  @JoinColumn(nullable = false)
   private DoctorAvailableTime doctorAvailableTime;
 }

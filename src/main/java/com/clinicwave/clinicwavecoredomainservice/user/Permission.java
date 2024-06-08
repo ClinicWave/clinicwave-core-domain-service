@@ -26,5 +26,5 @@ public class Permission extends Audit implements Serializable {
   private Long id;
 
   @Column(nullable = false, unique = true)
-  private String name;
+  private String permissionName;
 }

@@ -27,7 +27,7 @@ public class Role extends Audit implements Serializable {
   private Long id;
 
   @Column(nullable = false, unique = true)
-  private String name;
+  private String roleName;
 
   @OneToMany(cascade = CascadeType.ALL, mappedBy = "role")
   private Set<RolePermission> rolePermissionSet;
